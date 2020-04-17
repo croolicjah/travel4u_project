@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podrózuj za grosze!</title>
+</head>
+<body>
+<h1>{{ welcomemessage }}</h1>
+
+<form action={% url "count" %}>
+    <textarea cols="150" rows="25" name="wordscounter"></textarea>
+    <br/>
+    <input type="submit" value="count" />
+
+</form>
+
+<br/>
+
+<form action={% url "about" %}>
+    <input type="submit" value="about" />
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liczba słów</title>
+</head>
+<body>
+<h1>Liczba słów, które wpisałeś to {{ count }}:</h1>
+<h2>Twój tekst to:</h2>
+{{ wordscounter }}
+<br />
+<a href="{% url 'home' %}">LICZ OD NOWA</a>
+{#<h2>Liczba słów w tekście: </h2>#}
+{#<h3>{{ wordsdictionary }}</h3>#}
+
+<h2>Liczba słów w tekście:</h2>
+{% for word, counttotal in wordsdictionary %}
+    <h3>{{ word }} : {{ counttotal }} raz/y</h3>
+{% endfor %}
+</body>
+</html>
