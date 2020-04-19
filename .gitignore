@@ -356,3 +356,11 @@ fabric.properties
 jakis
 =======
 >>>>>>> master
+
+.idea/
+
+travel4u_project/migrations/
+
+blog/migrations/
+
+fly4u/migrations/
