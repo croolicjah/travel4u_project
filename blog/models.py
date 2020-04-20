@@ -9,3 +9,12 @@ class Blog(models.Model):
     author = models.CharField(max_length=50)
     create_date = models.DateField()
     publish_date = models.DateField()
+
+    def summary(self):
+        return self.content[:400]
+
+    def publish_date_different(self):
+        return self.publish_date.strftime('%b %e %Y')
+
+    def __str__(self):
+        return self.title

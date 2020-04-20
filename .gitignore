@@ -364,3 +364,7 @@ travel4u_project/migrations/
 blog/migrations/
 
 fly4u/migrations/
+
+travel/
+
+fly4u/templates/fly4u/homOld.html

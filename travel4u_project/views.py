@@ -7,7 +7,7 @@ from django.shortcuts import render
 class Home(View):
     def get(self, request):
         #  <view logic>
-        return render(request, 'home.html', {'welcomemessage': "Znajdź tanie połączenia. Kolejowe, autobusowe i lotnicze!"})
+        return render(request, 'index.html', {})
 
     # def post(self, request):
     #     # <other view logic>
