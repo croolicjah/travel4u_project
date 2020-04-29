@@ -3089,8 +3089,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .hot-deal-area .owl-dot {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   display: inline-block;
   background: rgba(248, 182, 0, 0.2);
   margin-left: 5px;

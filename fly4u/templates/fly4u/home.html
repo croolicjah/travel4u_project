@@ -1,8 +1,10 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+
+<!DOCTYPE html>
+	<html lang="pl" class="no-js">
 	<head>
-        {% load bootstrap4 %}
-        {% load staticfiles %}
+        {% load static %}
+       {% load bootstrap4 %}
+
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -16,20 +18,26 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Travel</title>
+		<title>Travel4u</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="{% static 'css/linearicons.css' %}}">
+{#			<link rel="stylesheet" href="{% static 'css/linearicons.css' %}}">#}
+            <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 			<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 			<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 			<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 			<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
 			<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
-			<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+			<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 			<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+{#            <!-- Add the slick-theme.css if you want default styling -->#}
+{#            <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>#}
+{#            <!-- Add the slick-theme.css if you want default styling -->#}
+{#            <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>#}
+            <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
 			<link rel="stylesheet" href="{% static 'css/main.css' %}">
 		</head>
 		<body>	
@@ -98,9 +106,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Tour Packages				
+								Tanie loty
 							</h1>	
-							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="packages.html"> Tour Packages</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="packages.html"> Tanie loty</a></p>
 						</div>	
 					</div>
 				</div>
@@ -113,17 +121,27 @@
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-70 col-lg-8">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10">Today’s Hot Deals</h1>
-		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
+		                        <h1 class="mb-10">Najgorętsze oferty dnia</h1>
+		                        <p>Te oferty nie będą długo dostępne.</p>
 		                    </div>
 		                </div>
-		            </div>						
+		            </div>
+
 					<div class="row justify-content-center">
-						<div class="col-lg-10 active-hot-deal-carusel">
-							<div class="single-carusel">
+						<div class="col-lg-10 owl-carousel">
+{#                            <div class="owl-carousel">#}
+{#                                  <div> 1 </div>#}
+{#                                  <div> 2 </div>#}
+{#                                  <div> 3 </div>#}
+{#                                  <div> 4 </div>#}
+{#                                  <div> 5 </div>#}
+{#                                  <div> 6 </div>#}
+{#                                  <div> 7 </div>#}
+{#                            </div>#}
+                            <div class="single-carusel">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="{% static 'img/packages/hot-deal.jpg' %}" alt="">
+									<img class="img-fluid  owl-lazy" data-src="{% static 'img/packages/hot-deal.jpg' %}" data-src-retina="{% static 'img/packages/hot-deal.jpg' %}" alt="">
 								</div>
 								<div class="price-detials">
 									<a href="#" class="price-btn">Starting From <span>$250</span></a>
@@ -133,12 +151,17 @@
 									<p class="text-white">
 										Cairo, Egypt
 									</p>
-								</div>								
+								</div>
 							</div>
+{#                            <picture>#}
+{#                                <source class="owl-lazy" media="(min-width: 650px)" data-srcset="{% static 'img/packages/hot-deal.jpg' %}">#}
+{#                                <source class="owl-lazy" media="(min-width: 350px)" data-srcset="{% static 'img/packages/hot-deal.jpg' %}">#}
+{#                                <img class="owl-lazy" data-src="{% static 'img/packages/hot-deal.jpg' %}" alt="">#}
+{#                            </picture>#}
 							<div class="single-carusel">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="{% static 'img/packages/hot-deal.jpg' %}" alt="">
+									<img class="img-fluid  owl-lazy" data-src="{% static 'img/packages/hot-deal.jpg' %}" data-src-retina="{% static 'img/packages/hot-deal.jpg' %}" alt="">
 								</div>
 								<div class="price-detials">
 									<a href="#" class="price-btn">Starting From <span>$250</span></a>
@@ -148,12 +171,13 @@
 									<p class="text-white">
 										Cairo, Egypt
 									</p>
-								</div>								
+								</div>
 							</div>
+
 							<div class="single-carusel">
 								<div class="thumb relative">
 									<div class="overlay overlay-bg"></div>
-									<img class="img-fluid" src="{% static 'img/packages/hot-deal.jpg' %}" alt="">
+									<img class="img-fluid owl-lazy" data-src="{% static 'img/packages/hot-deal.jpg' %}" data-src-retina="{% static 'img/packages/hot-deal.jpg' %}" alt="">
 								</div>
 								<div class="price-detials">
 									<a href="#" class="price-btn">Starting From <span>$250</span></a>
@@ -163,8 +187,10 @@
 									<p class="text-white">
 										Cairo, Egypt
 									</p>
-								</div>								
-							</div>														
+								</div>
+							</div>
+
+
 						</div>
 					</div>
 				</div>	
@@ -178,224 +204,98 @@
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-40 col-lg-8">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10">Popular Destinations</h1>
-		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
+		                        <h1 class="mb-10">Najtaniej na krótkich dystansach</h1>
+		                        <p>Tylko to co lubicie najbardziej. Kierunki z największym zainteresowaniem</p>
 		                    </div>
 		                </div>
-		            </div>						
+		            </div>
 					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="{% static 'img/packages/d1.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="{% static 'img/packages/d2.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="{% static 'img/packages/d3.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="{% static 'img/packages/d4.jpg' %}" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="img/packages/d5.jpg" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-destinations">
-								<div class="thumb">
-									<img src="img/packages/d6.jpg" alt="">
-								</div>
-								<div class="details">
-									<h4>Holiday Sea beach Blue Ocean</h4>
-									<p>
-										United staes of America
-									</p>
-									<ul class="package-list">
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Duration</span>
-											<span>06 days and 7 nights</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Date</span>
-											<span>18.04.2018</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Airport</span>
-											<span>Changi</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Extras</span>
-											<span>All Inclusive</span>
-										</li>
-										<li class="d-flex justify-content-between align-items-center">
-											<span>Price per person</span>
-											<a href="#" class="price-btn">$250</a>
-										</li>													
-									</ul>
-								</div>
-							</div>
-						</div>																														
+                        {% for snippet in deals %}
+                            <div class="col-lg-4">
+                                <div class="single-destinations">
+                                    <div class="thumb">
+                                        <img src="{{ snippet.widePhotoUrl }}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <h4> {{ snippet.departure.cityFrom }} {{ snippet.arrival.cityNameToForm}} </h4>
+                                        <p>
+                                            {{ snippet.arrival.countryName }}, {{ snippet.arrival.airportName }}
+                                        </p>
+                                        <ul class="package-list">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Typ podróży</span>
+                                                <span>{{ snippet.flightType }}</span>
+                                            </li>
+{#                                            <li class="d-flex justify-content-between align-items-center">#}
+{#                                                <span>Data</span>#}
+{#                                                <span>18.04.2018</span>#}
+{#                                            </li>#}
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Wylot</span>
+                                                <span>{{ snippet.departure.airportName }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Linie</span>
+                                                <span>{{ snippet.airlineCode }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Cena za osobę</span>
+                                                <a href="{{ snippet.url }}" class="price-btn">{{ snippet.priceAmount }} PLN</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
 					</div>
-				</div>	
+
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-40 col-lg-8">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">Nachętniej odwiedzane miasta</h1>
+		                        <p>Według ULC do tych tam lata najwięcej pasażerów z polskich lotnisk</p>
+		                    </div>
+		                </div>
+		            </div>
+					<div class="row">
+{#                        {% for snippet in deals %}#}
+                            <div class="col-lg-4">
+                                <div class="single-destinations">
+                                    <div class="thumb">
+                                        <img src="{{ snippet.widePhotoUrl }}" alt="">
+                                    </div>
+                                    <div class="details">
+                                        <h4> {{ snippet.departure.cityFrom }} {{ snippet.arrival.cityNameToForm}} </h4>
+                                        <p>
+                                            {{ snippet.arrival.countryName }}, {{ snippet.arrival.airportName }}
+                                        </p>
+                                        <ul class="package-list">
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Typ podr</span>
+                                                <span>{{ snippet.flightType }}</span>
+                                            </li>
+{#                                            <li class="d-flex justify-content-between align-items-center">#}
+{#                                                <span>Data</span>#}
+{#                                                <span>18.04.2018</span>#}
+{#                                            </li>#}
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Wylot</span>
+                                                <span>{{ snippet.departure.airportName }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Linie</span>
+                                                <span>{{ snippet.airlineCode }}</span>
+                                            </li>
+                                            <li class="d-flex justify-content-between align-items-center">
+                                                <span>Cena za osobę</span>
+                                                <a href="{{ snippet.url }}" class="price-btn">{{ snippet.priceAmount }} PLN</a>
+                                            </li>
+                                        </ul>
+                                    </div</div>
+                            </div>
+{#                        {% endfor %}#}
+					</div>
+				</div>
 			</section>
 			<!-- End destinations Area -->
 			
@@ -416,7 +316,7 @@
 							<a href="#" class="primary-btn text-uppercase">request custom price</a>
 						</div>
 						<div class="col-lg-6 col-md-12 home-about-right no-padding">
-							<img class="img-fluid" src="img/packages/about-img.jpg" alt="">
+							<img class="img-fluid" src="{% static 'img/packages/about-img.jpg' %}" alt="">
 						</div>
 					</div>
 				</div>	
@@ -480,14 +380,14 @@
 							<div class="single-footer-widget mail-chimp">
 								<h6 class="mb-20">InstaFeed</h6>
 								<ul class="instafeed d-flex flex-wrap">
-									<li><img src="img/i1.jpg" alt=""></li>
-									<li><img src="img/i2.jpg" alt=""></li>
-									<li><img src="img/i3.jpg" alt=""></li>
-									<li><img src="img/i4.jpg" alt=""></li>
-									<li><img src="img/i5.jpg" alt=""></li>
-									<li><img src="img/i6.jpg" alt=""></li>
-									<li><img src="img/i7.jpg" alt=""></li>
-									<li><img src="img/i8.jpg" alt=""></li>
+									<li><img src="{% static 'img/i1.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i2.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i3.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i4.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i5.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i6.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i7.jpg' %}" alt=""></li>
+									<li><img src="{% static 'img/i8.jpg' %}" alt=""></li>
 								</ul>
 							</div>
 						</div>						
@@ -508,19 +408,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</footer>
 			<!-- End footer Area -->	
 
-			<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
-			<script src="{% static 'js/popper.min.js' %}"></script>
-			<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
-			<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA' %}"></script>
- 			<script src="{% static 'js/jquery-ui.js' %}"></script>
-  			<script src="{% static 'js/easing.min.js' %}"></script>
-			<script src="{% static 'js/hoverIntent.js' %}"></script>
-			<script src="{% static 'js/superfish.min.js' %}"></script>
-			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-			<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
-			<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+{#			<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>#}
+{#			<script src="{% static 'js/popper.min.js' %}"></script>#}
+            <script src="https://code.jquery.com/jquery-3.5.0.js"
+                    integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+                    crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.3.3/umd/popper.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+
+{# 			<script src="{% static 'js/jquery-ui.js' %}"></script>#}
+            <script
+              src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+              integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+              crossorigin="anonymous"></script>
+  			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.10.1/jquery.hoverIntent.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/superfish/1.7.10/js/superfish.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+            <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 			<script src="{% static 'js/mail-script.js' %}"></script>
 			<script src="{% static 'js/main.js' %}"></script>
+            <script src="{% static 'js/app.js' %}"></script>
+
 		</body>
 	</html>

@@ -368,3 +368,29 @@ fly4u/migrations/
 travel/
 
 fly4u/templates/fly4u/homOld.html
+
+fly4u/layouts/
+
+slick-1.8.1/
+
+travel4u_project/local_settings
+
+fly4u/awesome-flights-master/
+
+fly4u/api esky
+
+fly4u/esky.json
+
+travel4u_project/settings.py
+
+travel4u_project/static/Travel - Doc/.DS_Store
+
+travel4u_project/static/Travel - Doc/css/.DS_Store
+
+travel4u_project/static/Travel - Doc/fonts/.DS_Store
+
+travel4u_project/static/Travel - Doc/img/.DS_Store
+
+travel4u_project/static/Travel - Doc/js/.DS_Store
+
+travel4u_project/static/Travel - Doc/syntax-highlighter/.DS_Store
